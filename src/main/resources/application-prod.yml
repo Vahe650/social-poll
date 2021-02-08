@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/social-poll?useSSL=false&useUnicode=true&serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/social_poll?useSSL=false&useUnicode=true&serverTimezone=UTC
     password: root
     username: root
   jpa:
