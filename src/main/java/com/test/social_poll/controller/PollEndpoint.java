@@ -33,14 +33,19 @@ public class PollEndpoint {
     }
 
     @DeleteMapping("/{pollId}")
-    public ResponseEntity deleteProduct(@PathVariable Long pollId) {
+    public ResponseEntity delete(@PathVariable Long pollId) {
         pollService.delete(pollId);
         return ResponseEntity.ok().build();
     }
 
-    @GetMapping("/search")
-    public List<PollDto> getById(@RequestParam(required = false) Long id,@RequestParam(required = false) String title) {
-        return pollService.findByIdOrTitle(id,title);
+    @GetMapping("/search-title")
+    public PollDto getByTitle(@RequestParam String title) {
+        return pollService.findByTitle(title);
+    }
+
+    @GetMapping("/search-id")
+    public PollDto getById(@RequestParam Long id) {
+        return pollService.findById(id);
     }
 
     @GetMapping("/active-polls")
@@ -49,3 +54,4 @@ public class PollEndpoint {
     }
 
 }
+

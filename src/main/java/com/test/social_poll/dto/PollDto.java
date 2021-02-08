@@ -1,11 +1,6 @@
 package com.test.social_poll.dto;
 
-import com.test.social_poll.entity.Question;
-
-import javax.persistence.*;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
 public class PollDto {
@@ -95,3 +90,4 @@ public class PollDto {
                 '}';
     }
 }
+

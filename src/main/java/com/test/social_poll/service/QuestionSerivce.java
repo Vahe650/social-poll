@@ -13,6 +13,5 @@ public interface QuestionSerivce {
     QuestionDto update(QuestionDto questionDto);
 
     void delete(Long questionId);
-
-
 }
+

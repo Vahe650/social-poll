@@ -8,5 +8,8 @@ import java.util.Optional;
 
 public interface PollRepository extends JpaRepository<Poll, Long> {
     List<Poll> findByIdOrTitle(Long id, String title);
+
     List<Poll> findByIsActive(boolean isActive);
+
+    Optional<Poll> findByTitle(String title);
 }

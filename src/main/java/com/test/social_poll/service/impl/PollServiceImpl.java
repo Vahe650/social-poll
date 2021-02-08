@@ -7,6 +7,7 @@ import com.test.social_poll.repo.PollRepository;
 import com.test.social_poll.service.PollService;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.EntityNotFoundException;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -46,9 +47,15 @@ public class PollServiceImpl implements PollService {
     }
 
     @Override
-    public List<PollDto> findByIdOrTitle(Long id, String title) {
-        List<Poll> resultList = pollRepository.findByIdOrTitle(id, title);
-        return resultList.stream().map(u -> mapper.pollEntityToDto(u)).collect(Collectors.toList());
+    public PollDto findById(Long id) {
+        Poll poll = pollRepository.findById(id).orElseThrow(EntityNotFoundException::new);
+        return mapper.pollEntityToDto(poll);
+    }
+
+    @Override
+    public PollDto findByTitle(String title) {
+        Poll poll = pollRepository.findByTitle(title).orElseThrow(EntityNotFoundException::new);
+        return mapper.pollEntityToDto(poll);
     }
 
     @Override
@@ -57,3 +64,4 @@ public class PollServiceImpl implements PollService {
         return resultList.stream().map(u -> mapper.pollEntityToDto(u)).collect(Collectors.toList());
     }
 }
+

@@ -14,8 +14,10 @@ public interface PollService {
 
     void delete(Long pollId);
 
-    List<PollDto> findByIdOrTitle(Long id, String title);
+    PollDto findById(Long id);
+
+    PollDto findByTitle(String title);
 
     List<PollDto> findByActive();
-
 }
+

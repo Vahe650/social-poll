@@ -33,8 +33,9 @@ public class QuestionEndpoint {
     }
 
     @DeleteMapping("/{questionId}")
-    public ResponseEntity deleteProduct(@PathVariable Long questionId) {
+    public ResponseEntity delete(@PathVariable Long questionId) {
         questionSerivce.delete(questionId);
         return ResponseEntity.ok().build();
     }
 }
+

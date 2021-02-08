@@ -19,5 +19,5 @@ public interface ObjectMapper {
 
     QuestionDto questionEntityToDto(Question in);
 
-
 }
+

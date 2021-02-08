@@ -3,9 +3,6 @@ spring:
     url: jdbc:mysql://localhost:3306/social-poll?useSSL=false&useUnicode=true&serverTimezone=UTC
     password: root
     username: root
-#  jpa:
-#    hibernate:
-#      ddl-auto: update
-#    properties:
-#      hibernate:
-#        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+  jpa:
+    hibernate:
+      ddl-auto: update
