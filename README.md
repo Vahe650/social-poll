@@ -1,7 +1,7 @@
 # Social-Poll
 
  [Spring Boot](http://projects.spring.io/spring-boot/) app.
- [Click for opening Swagger UI page](http://3.22.235.207:8080/swagger-ui.html)
+ [Click for opening Swagger UI page](http://3.22.235.207:8085/swagger-ui.html)
 
 ## Requirements
 
